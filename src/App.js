@@ -10,25 +10,25 @@ class App extends Component {
     url: "https://www.food2fork.com/api/search?key=c3ddee385c6ce3caeb5ea9d600b07913"
   };
 
-  // async getRecipes() {
-  //   try {
-  //     const data = await fetch(this.state.url);
-  //     const jsonData = await data.json();
+  async getRecipes() {
+    try {
+      const data = await fetch(this.state.url);
+      const jsonData = await data.json();
 
-  //     this.setState({
-  //       recipes: jsonData.recipes
-  //     });
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }
+      this.setState({
+        recipes: jsonData.recipes
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
-  // componentDidMount(){
-  //   this.getRecipes()
-  // }
+  componentDidMount(){
+    this.getRecipes()
+  }
 
   render() {
-    console.log(this.state.recipes);
+    // console.log(this.state.recipes);
     return (
       <React.Fragment>
         <RecipeList recipes={this.state.recipes} />
