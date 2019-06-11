@@ -23,7 +23,12 @@ class App extends Component {
     }
   }
 
+  componentDidMount(){
+    this.getRecipes()
+  }
+
   render() {
+    console.log(this.state.recipes);
     return (
       <React.Fragment>
         <RecipeList />
