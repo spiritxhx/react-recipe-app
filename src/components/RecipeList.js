@@ -18,17 +18,14 @@ export default class RecipeList extends Component {
           </div>
           {/* end of title */}
           <div className="row">
-            {
-              recipes.map( recipe =>{
-                return (
-                  <Recipe key={recipe.recipe_id}
-                  recipe = {recipe} />
-                )
-              })
-            }
+            {recipes.map(recipe => {
+              return (
+                <Recipe key={recipe.recipe_id}
+                  recipe={recipe} />
+              )
+            })}
           </div>
         </div>
-        <Recipe />
       </React.Fragment>
     )
   }

@@ -1,12 +1,27 @@
 import React, { Component } from 'react';
-import {recipe} from '../tempDetails';
+
 
 export default class Recipe extends Component {
   render() {
+    const{
+      image_url,
+      title,
+      source_url,
+      publisher, 
+      recipe_id
+    } = this.props.recipe;
+    
     return (
       <React.Fragment>
-        <h1>Hello from Recipe</h1>
+        <div className="col-10 mx-auto col-md-6 col-lg-4 my-3">
+          <div className="card">
+            <img src={image_url} 
+            className="img-card-top"
+            style={{height:"14rem"}}
+            alt="recipes"/>
+          </div>
+        </div>
       </React.Fragment>
-      )
+    )
   }
 }
