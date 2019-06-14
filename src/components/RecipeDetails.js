@@ -10,7 +10,7 @@ export default class RecipeDetails extends Component {
     }
   }
   render() {
-    const { image_url, publisher_url, source_url, title, ingredients } = this.state.recipe;
+    const { image_url, publisher, source_url, title, ingredients } = this.state.recipe;
 
     return (
       <React.Fragment>
@@ -25,7 +25,9 @@ export default class RecipeDetails extends Component {
             {/* {details} */}
             <div className="col-10 mx-auto col-md-6 my-3">
               <h6 className="text-uppercase">{title}</h6>
-              
+              <h6 className="text-warning text-capitalize text-slanted">
+                provided by {publisher}
+              </h6>
             </div>
           </div>
         </div>
