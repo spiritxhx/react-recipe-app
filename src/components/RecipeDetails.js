@@ -20,6 +20,7 @@ export default class RecipeDetails extends Component {
               <button type="button" className="btn btn-warning mb-5 text-capitalize">
                 back to recipe list
               </button>
+              <img src={image_url} className="d-block w-100" alt="recipe"/>
             </div>
           </div>
         </div>
