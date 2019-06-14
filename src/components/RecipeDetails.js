@@ -22,6 +22,11 @@ export default class RecipeDetails extends Component {
               </button>
               <img src={image_url} className="d-block w-100" alt="recipe"/>
             </div>
+            {/* {details} */}
+            <div className="col-10 mx-auto col-md-6 my-3">
+              <h6 className="text-uppercase">{title}</h6>
+              
+            </div>
           </div>
         </div>
       </React.Fragment>
