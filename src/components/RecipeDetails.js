@@ -38,10 +38,22 @@ export default class RecipeDetails extends Component {
               <a href={source_url}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-success mt-2 text-capitalize"
+              className="btn btn-success mt-2 mx-3 text-capitalize"
               >
                 recipe url
               </a>
+              <ul className="list-group mt-4">
+                <h2 className="mt-3 mb-4">Ingredients</h2>
+                {
+                  ingredients.map((item,index)=>{
+                    return (
+                      <li key={index} className="list-group-item text-slanted">
+                        {item}
+                      </li>
+                    )
+                  })
+                }
+              </ul>
             </div>
           </div>
         </div>
