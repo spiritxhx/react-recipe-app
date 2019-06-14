@@ -10,11 +10,19 @@ export default class RecipeDetails extends Component {
     }
   }
   render() {
-    console.log(this.state.recipe);
-    
+    const { image_url, publisher_url, source_url, title, ingredients } = this.state.recipe;
+
     return (
       <React.Fragment>
-        <h1>Hello from Details</h1>
+        <div className="container">
+          <div className="row">
+            <div className="col-10 mx-auto col-md-6 my-3">
+              <button type="button" className="btn btn-warning mb-5 text-capitalize">
+                back to recipe list
+              </button>
+            </div>
+          </div>
+        </div>
       </React.Fragment>
     )
   }
