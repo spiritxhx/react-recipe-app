@@ -10,7 +10,7 @@ export default class RecipeDetails extends Component {
     }
   }
   render() {
-    const { image_url, publisher, source_url, title, ingredients } = this.state.recipe;
+    const { image_url, publisher, publisher_url, source_url, title, ingredients } = this.state.recipe;
 
     return (
       <React.Fragment>
@@ -28,6 +28,20 @@ export default class RecipeDetails extends Component {
               <h6 className="text-warning text-capitalize text-slanted">
                 provided by {publisher}
               </h6>
+              <a href={publisher_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary mt-2 text-capitalize"
+              >
+                publisher webpage
+              </a>
+              <a href={source_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-success mt-2 text-capitalize"
+              >
+                recipe url
+              </a>
             </div>
           </div>
         </div>
