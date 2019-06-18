@@ -8,8 +8,8 @@ class App extends Component {
   state = {
     recipes: recipes,
     url: "https://www.food2fork.com/api/search?key=c3ddee385c6ce3caeb5ea9d600b07913",
-    details_id: 35380, 
-    pageIndex: 0
+    details_id: 35380,
+    pageIndex: 1
   };
 
   async getRecipes() {
@@ -32,14 +32,29 @@ class App extends Component {
   displayPage = (index) => {
     switch (index) {
       default:
-      case 1: return (<RecipeList recipes={this.state.recipes} />);
-      case 0: return (<RecipeDetails id={this.state.details_id} />);
+      case 1:
+        return <RecipeList
+          recipes={this.state.recipes}
+          handleDetails={this.handleDetails}
+        />;
+      case 0:
+        return <RecipeDetails
+          id={this.state.details_id}
+          handleIndex={this.handleIndex}
+        />;
     }
   };
 
-  handleIndex = index =>{
+  handleIndex = index => {
     this.setState({
-      pageIndex:index
+      pageIndex: index
+    });
+  };
+
+  handleDetails = (index, id) => {
+    this.setState({
+      pageIndex: index,
+      details_id: id
     })
   }
 
