@@ -52,7 +52,7 @@ export default class RecipeDetails extends Component {
               <button
                 type="button"
                 className="btn btn-warning mb-5 text-capitalize"
-                onClick={()=>handleIndex(1)}
+                onClick={() => handleIndex(1)}
               >
                 back to recipe list
               </button>

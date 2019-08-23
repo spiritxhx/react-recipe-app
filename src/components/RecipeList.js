@@ -22,7 +22,8 @@ export default class RecipeList extends Component {
               return (
                 <Recipe key={recipe.recipe_id}
                   recipe={recipe}
-                  handleDetails={handleDetails} />
+                  handleDetails={() => handleDetails(0, recipe.recipe_id)}
+                />
               )
             })}
           </div>
